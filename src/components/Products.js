@@ -18,7 +18,7 @@ class Products extends Component {
         return(
             <div>
                 <Filters />
-                <ProductTable />
+                <ProductTable products={this.state.products}/>
                 <ProductForm />
             </div>
         );
