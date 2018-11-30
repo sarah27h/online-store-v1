@@ -1,5 +1,11 @@
-.App {
-  text-align: center;
+/* start general */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .App-logo {
