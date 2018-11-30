@@ -11,3 +11,8 @@
     color: #efefef;
     border: 1px solid #fff;
 }
+
+.out-of-stock {
+    color: #ee2c2c;
+    font-weight: 500;
+}

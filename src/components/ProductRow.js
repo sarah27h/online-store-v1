@@ -6,7 +6,10 @@ class ProductRow extends Component {
         return(
             <tr>
                 <td>
-                    {this.props.product.name}
+                    {/* add out-of-stock className for out of stock product */}
+                    <span className={this.props.product.stocked ? '' : 'out-of-stock'}>
+                        {this.props.product.name}
+                    </span>
                 </td>
                 <td>
                     {this.props.product.price}
