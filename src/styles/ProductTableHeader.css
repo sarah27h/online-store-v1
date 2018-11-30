@@ -1,0 +1,13 @@
+.sort-btn {
+    background: #efefef;
+    color: #333;
+    border: 1px solid #333;
+    padding: 3px;
+    cursor: pointer;
+}
+
+.btn-current-used {
+    background: #333;
+    color: #efefef;
+    border: 1px solid #fff;
+}
