@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ProductTableHeader from './ProductTableHeader';
 import ProductRow from './ProductRow';
+import '../styles/ProductTable.css'
 
 class ProductTable extends Component {
 
@@ -16,11 +17,12 @@ class ProductTable extends Component {
         });
         return(
             <div>
-                <table>
+                <table className="table-container">
                     {/* table header */}
                     <thead>
                         <tr>
-                            <ProductTableHeader />
+                            <ProductTableHeader columnName="name" />
+                            <ProductTableHeader columnName="price" />
                         </tr>
                     </thead>
 

@@ -1,0 +1,10 @@
+.table-container {
+    max-width: 450px;
+    width: 100%;
+    padding: 35px;
+    margin: auto;
+}
+
+.table-container thead {
+    text-align: left;
+}
