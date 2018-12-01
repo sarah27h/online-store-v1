@@ -9,7 +9,7 @@ class Products extends Component {
     state= {
         products: PRODUCTS,
         filterText: '',
-        inStock: true
+        inStock: false // to be unchecked by default
     }
 
     render() {
