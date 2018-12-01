@@ -11,9 +11,14 @@ class ProductTable extends Component {
         console.log(productsAsArray);
         // create products table
         const tableRows = productsAsArray.map((product) => {
+            // add products that only inStock and match with user inputs
+            if(product.name.indexOf(this.props.filterText) === -1 || (!product.stocked && this.props.inStock)) {
+                return;
+            }
             return(
                 <ProductRow product={product} key={product.id}/>
             );
+            
         });
         return(
             <div>
