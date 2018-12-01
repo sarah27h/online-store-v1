@@ -5,6 +5,13 @@ import '../styles/ProductTable.css'
 
 class ProductTable extends Component {
 
+    state={
+        sort: { // as default values
+            columnName: 'name',
+            direction: 'desc'
+        }
+    }
+
     render() {
         // convert products object to an array to be able to iterate over its items
         const productsAsArray = Object.keys(this.props.products).map((key) => this.props.products[key]);
@@ -26,8 +33,13 @@ class ProductTable extends Component {
                     {/* table header */}
                     <thead>
                         <tr>
-                            <ProductTableHeader columnName="name" />
-                            <ProductTableHeader columnName="price" />
+                            <ProductTableHeader 
+                                columnName="name"
+                                sort={this.state.sort} />
+
+                            <ProductTableHeader 
+                                columnName="price"
+                                sort={this.state.sort} />
                         </tr>
                     </thead>
 
