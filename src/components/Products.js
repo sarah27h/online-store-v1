@@ -7,14 +7,22 @@ import {PRODUCTS} from '../ProductsData.js'
 class Products extends Component {
 
     state= {
-        products: PRODUCTS
+        products: PRODUCTS,
+        filterText: '',
+        inStock: true
     }
 
     render() {
         return(
             <div>
-                <Filters />
-                <ProductTable products={this.state.products}/>
+                <Filters 
+                  filterText={this.state.filterText}
+                  inStock={this.state.inStock}  
+                />
+                <ProductTable 
+                    products={this.state.products}
+                    filterText={this.state.filterText}
+                    inStock={this.state.inStock}/>
                 <ProductForm />
             </div>
         );
