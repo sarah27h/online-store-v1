@@ -7,11 +7,7 @@ import {PRODUCTS} from '../ProductsData.js'
 class Products extends Component {
 
     state= {
-        products: []
-    }
-
-    componentDidMount() {
-        this.setState({ products : PRODUCTS })
+        products: PRODUCTS
     }
 
     render() {
