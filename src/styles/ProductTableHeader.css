@@ -1,8 +1,9 @@
 .sort-btn {
-    background: #efefef;
+    background: #b6b6b6;
     color: #333;
-    border: 1px solid #333;
+    border: none;
     padding: 3px;
+    margin-left: 5px;
     cursor: pointer;
 }
 
