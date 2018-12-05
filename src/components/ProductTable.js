@@ -18,6 +18,11 @@ class ProductTable extends Component {
         // convert products object to an array to be able to iterate over its items
         const productsAsArray = Object.keys(this.props.products).map((key) => this.props.products[key]);
         console.log(productsAsArray);
+        
+        // convert and add product price as number to sort products according to price easily
+        productsAsArray.forEach(function(product,index) {
+            product.priceNumber = Number((product.price).slice(1).replace(/,/, ""));
+        });
 
         let tableRows
 
@@ -42,6 +47,27 @@ class ProductTable extends Component {
         } else {
             console.log(`normal case`);
             tableRows = productsAsArray;
+        }
+
+        // tableRows.forEach(function(product,index) {
+        //     if((product.price).includes('$')) {
+        //         tableRows[index].price = Number((tableRows[index].price).slice(1).replace(/,/, ""));
+        //     } else {
+        //         return tableRows;
+        //     }
+        // });
+        console.log(tableRows);
+
+        // apply sorting & create products table
+        // depends on (columnName, direction) and (asc, desc) states
+        if(this.state.sort.columnName === 'name' && this.state.sort.direction === 'desc') {
+            tableRows.sort(sortBy('-name'));
+        } else if (this.state.sort.columnName === 'name' && this.state.sort.direction === 'asc') {
+            tableRows.sort(sortBy('name'));
+        } else if(this.state.sort.columnName === 'price' && this.state.sort.direction === 'desc') {
+            tableRows.sort(sortBy('-priceNumber'));
+        } else if (this.state.sort.columnName === 'price' && this.state.sort.direction === 'asc') {
+            tableRows.sort(sortBy('priceNumber'));
         }
     
         // second method for filtering
