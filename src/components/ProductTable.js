@@ -10,7 +10,7 @@ class ProductTable extends Component {
     state={
         sort: { // as default values
             columnName: 'name',
-            direction: 'desc'
+            direction: 'asc'
         }
     }
 
