@@ -11,12 +11,12 @@ class Filters extends Component {
     // get e.target.name -> filterText
     // this.props.onFilter({ [filterText]: b });
     handleChange = (e) => {
-        // check in which chanhe occurs
+        // check in which change occurs
         const value = e.target[e.target.type === "checkbox" ? "checked" : "value"];
         const name = e.target.name;
         console.log(value, e.target.name, e.target["value"], e.target["checked"]);
         console.log({ [name]: value }); // {filterText: "b"}
-        // used the ES6 computed property name syntax to update the state key 
+        // used the ES6 computed property name syntax to update the state key
         this.props.onFilter({ [name]: value });
     }
 
@@ -40,7 +40,7 @@ class Filters extends Component {
                         id="show"
                         checked={this.props.inStock}
                         name="inStock"
-                        onChange={this.handleChange}/>                    
+                        onChange={this.handleChange}/>
                     <label htmlFor="show"> Only show products in stock</label>
                 </div>
                 </form>
