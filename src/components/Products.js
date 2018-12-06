@@ -12,12 +12,18 @@ class Products extends Component {
         inStock: false // to be unchecked by default
     }
 
+    //add event
+    handleFilter = (filterInput) => {
+        this.setState(filterInput);
+    }
+
     render() {
         return(
             <div>
                 <Filters 
                   filterText={this.state.filterText}
-                  inStock={this.state.inStock}  
+                  inStock={this.state.inStock}
+                  onFilter={this.handleFilter}
                 />
                 <ProductTable 
                     products={this.state.products}
