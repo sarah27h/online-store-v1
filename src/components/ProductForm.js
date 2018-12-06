@@ -57,7 +57,7 @@ class ProductForm extends Component {
                             className="form-check" 
                             type="checkbox" 
                             name="inStock" 
-                            value={this.state.product.stocked}
+                            checked={this.state.product.stocked}
                             id="show"/>
                         <label htmlFor="show"> In stock?</label>
                     </div>
