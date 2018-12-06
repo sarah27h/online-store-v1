@@ -21,10 +21,11 @@ class ProductForm extends Component {
                         </div>
                     <div className="form-input">
                         <input 
-                            className="form-text" 
-                            id="name" 
-                            type="text" 
-                            name="name" 
+                            className="form-text"
+                            id="name"
+                            type="text"
+                            name="name"
+                            value={this.state.product.name}
                             placeholder="product name" />
                     </div>
                     <div className="form-row">
@@ -36,6 +37,7 @@ class ProductForm extends Component {
                             id="category" 
                             type="text" 
                             name="category" 
+                            value={this.state.product.category}
                             placeholder="product category" />
                     </div>
                     <div className="form-row">
@@ -47,6 +49,7 @@ class ProductForm extends Component {
                             id="price" 
                             type="text" 
                             name="price" 
+                            value={this.state.product.price}
                             placeholder="product price" />
                     </div>
                     <div className="form-row">
@@ -54,6 +57,7 @@ class ProductForm extends Component {
                             className="form-check" 
                             type="checkbox" 
                             name="inStock" 
+                            value={this.state.product.stocked}
                             id="show"/>
                         <label htmlFor="show"> In stock?</label>
                     </div>
