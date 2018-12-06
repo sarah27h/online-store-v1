@@ -1,7 +1,17 @@
 import React, {Component} from 'react';
 import '../styles/ProductForm.css'
 
+// create a variable to reset product state after submitting
+const RESET_VALUES = {id: '', category: '', price: '', stocked: false, name: ''};
+
 class ProductForm extends Component {
+
+    // create product state to hold user's added product
+    // using Object.assign() method to copy the values of same properties
+    // from sources (RESET_VALUES) to target (product)
+    state= {
+        product: Object.assign({}, RESET_VALUES)
+    }
     render() {
         return(
             <div className="form-container">
@@ -10,22 +20,41 @@ class ProductForm extends Component {
                         <label htmlFor="name">Name</label>
                         </div>
                     <div className="form-input">
-                        <input className="form-text" id="name" type="text" name="name" placeholder="product name" />
+                        <input 
+                            className="form-text" 
+                            id="name" 
+                            type="text" 
+                            name="name" 
+                            placeholder="product name" />
                     </div>
                     <div className="form-row">
                         <label htmlFor="category">Category</label>
                         </div>
                     <div className="form-input">
-                        <input className="form-text" id="category" type="text" name="category" placeholder="product category" />
+                        <input 
+                            className="form-text" 
+                            id="category" 
+                            type="text" 
+                            name="category" 
+                            placeholder="product category" />
                     </div>
                     <div className="form-row">
                         <label htmlFor="price">Price</label>
                         </div>
                     <div className="form-input">
-                        <input className="form-text" id="price" type="text" name="price" placeholder="product price" />
+                        <input 
+                            className="form-text" 
+                            id="price" 
+                            type="text" 
+                            name="price" 
+                            placeholder="product price" />
                     </div>
                     <div className="form-row">
-                        <input className="form-check" type="checkbox" name="inStock" id="show"/>
+                        <input 
+                            className="form-check" 
+                            type="checkbox" 
+                            name="inStock" 
+                            id="show"/>
                         <label htmlFor="show"> In stock?</label>
                     </div>
                     <div className="form-row">
